@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import font
-import requests
+import requests 
 
 HEIGHT=500  
 WIDTH=600
@@ -71,7 +71,7 @@ button.place(relwidth=0.3,relheight=1,relx=0.7)
 lframe = tk.Frame(root,bg="#3366ff",bd=10)
 lframe.place(relx=0.5,rely=0.25,relwidth=0.75,relheight=0.6,anchor="n")
 
-label = tk.Label(lframe,font=('calibri'))
+label = tk.Label(lframe,font=('calibri'),bg="black",fg="white")
 label.place(relwidth=1,relheight=1)
 
 root.mainloop()
