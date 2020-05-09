@@ -14,20 +14,14 @@ def format_jason(weather):
         name = weather['name']
         desc = weather['weather'][0]['description']
         temp = weather['main']['temp']
-        tempmin = weather['main']['temp_min']
-        tempmax = weather['main']['temp_max']
+        feel = weather['main']['feels_like']
         humi = weather['main']['humidity']
         wind = weather['wind']['speed']
         pressure = weather['main']['pressure']
-        sealevel = weather['main']['sea_level']
+     
+    
 
-      
-  
-        
-
-
-
-        f_str = 'City: %s \nConditions: %s \nTemperature(C): %s \nMin Temperature(C): %s\nMax Temparature(C): %s\nMax Humidity: %s\nWind Speed(km/h): %s\nPressure: %s\nSea Level: %s' % (name,desc,temp,tempmin,tempmax,humi,wind,pressure,sealevel)
+        f_str = 'City: %s \nConditions: %s \nTemperature(C): %s \nFeel(C): %s\nHumidity: %s\nWind Speed(km/h): %s\nPressure: %s' % (name,desc,temp,feel,humi,wind,pressure)
     
     except:
         f_str = 'There was a problem retrieving information'
@@ -43,6 +37,8 @@ def get_weather(city):
     weather = response.json()
 
     label['text'] = format_jason(weather)
+
+    print(response.json())
 
 
 
